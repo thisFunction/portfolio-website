@@ -1,6 +1,9 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.scss';
+import mainPage from './components/main-page/main-page'
 
+import React from 'react'
+window.React = React;
 ReactDOM.render(
-    <div><h1>Hello</h1></div>,
+    mainPage,
     document.getElementById('root'));
