@@ -1,10 +1,15 @@
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom'
 import './css-reset.css';
 import './index.scss';
 import mainPage from './components/main-page/main-page'
+import {BrowserRouter, Route} from 'react-router-dom';
 
 import React from 'react'
 window.React = React;
-ReactDOM.render(
-    mainPage,
-    document.getElementById('root'));
+
+render(
+    <BrowserRouter>
+        <Route path="/" component={mainPage} />
+    </BrowserRouter>,
+    document.getElementById('root')
+);
