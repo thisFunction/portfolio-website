@@ -7,7 +7,7 @@ body {
 }
 
 #root {
-    font-family: 'Crimson Text', serif;
+    font-family: $main-font;
     height: 100%;
     color: $font-color;
     background: $background-color;

@@ -49,6 +49,7 @@ table {
 }
 /* ---End of css reset--- */
 p {
-    line-height: 1.2em;
+    font-size: 0.8em;
+    line-height: 1.4em;
     margin-bottom: 1.2em;
 }
