@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import './css-reset.css';
 import './index.scss';
 import mainPage from './components/main-page/main-page'
 
