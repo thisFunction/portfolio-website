@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default (
-    <aside className="name">Adam Skoczylas</aside>
+    <aside className="large-aside">Adam Skoczylas</aside>
 )

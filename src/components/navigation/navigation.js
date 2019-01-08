@@ -11,11 +11,10 @@ const Navigation = () => {
         <Link to="/add-day">
             Playground 
         </Link> 
-        <Link to="/list-days">
+        <Link to="/contact">
             Contact 
         </Link>
     </nav>
 )}
-
 
 export default Navigation

@@ -1,7 +1,6 @@
 @import '../../variables';
 
 .navigation {
-    
     position: absolute;
     bottom: 0;
     width: 96%;
@@ -13,7 +12,7 @@
     @media (max-width: 780px) {
         flex-direction: column;
         width: 90%;
-        padding-left: 10%;
+        padding: 0.8em 10%;
     }
     a {
         font-family: $header-font;
@@ -24,6 +23,7 @@
         @media (max-width: 780px) {
             flex-direction: column;
             width: 90%;
+            margin-bottom: .3em;
         }
     }
 }
