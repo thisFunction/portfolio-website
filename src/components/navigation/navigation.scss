@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.navigation {
+    
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    background: $background-color;
+
+    @media (max-width: 780px) {
+        flex-direction: column;
+        width: 90%;
+        padding-left: 10%;
+    }
+    a {
+        font-family: $header-font;
+        text-transform: uppercase;
+        color: $font-accent-color;
+        text-decoration: none;
+        
+        @media (max-width: 780px) {
+            flex-direction: column;
+            width: 90%;
+        }
+    }
+}
