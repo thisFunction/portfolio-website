@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Adam Skoczylas Portfolio",
+  "name": "Adam Skoczylas Front-End portfolio created using react.",
   "icons": [
     {
       "src": "favicon.ico",
