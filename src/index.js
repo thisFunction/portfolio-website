@@ -1,15 +1,17 @@
+import React from 'react'
 import { render } from 'react-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './css-reset.css';
 import './index.scss';
-import mainPage from './components/main-page/main-page'
-import {BrowserRouter, Route} from 'react-router-dom';
-
-import React from 'react'
-window.React = React;
+import MainPage from './components/main-page/main-page'
+import ErrorPage from './components/error-page/error-page'
 
 render(
     <BrowserRouter>
-        <Route path="/" component={mainPage} />
+        <Switch>
+            <Route path="/" component={MainPage} exact />
+            <Route component={ErrorPage} />
+        </Switch>
     </BrowserRouter>,
     document.getElementById('root')
 );
