@@ -13,7 +13,7 @@ import createHashHistory from 'history/createHashHistory';
 const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
 
 render(
-    <Router  history={hashHistory}>
+    <Router history={hashHistory}>
         <Switch>
             <Route path="/" component={MainPage} exact />
             <Route path="/playground" component={PlaygroundPage} />
