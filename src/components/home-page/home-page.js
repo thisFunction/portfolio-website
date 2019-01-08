@@ -1,5 +1,5 @@
 import React from 'react'
-import './main-page.scss'
+import './home-page.scss'
 import largeAsideName from './aside'
 import introductionSection from './introduction'
 import Navigation from '../navigation/navigation'
@@ -7,7 +7,7 @@ import Navigation from '../navigation/navigation'
 const MainPage = () => {
     return (
         <div className="app">
-            <section className="full-screen-page main-page">
+            <section className="full-screen-page home-page">
                 {largeAsideName}
                 {introductionSection}
             </section>

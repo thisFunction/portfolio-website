@@ -6,9 +6,9 @@ const Navigation = () => {
     return (
     <nav className="navigation">
         <Link to="/" >
-            About 
+            Home 
         </Link>
-        <Link to="/add-day">
+        <Link to="/playground">
             Playground 
         </Link> 
         <Link to="/contact">

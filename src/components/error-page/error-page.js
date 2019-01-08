@@ -7,7 +7,7 @@ const ErrorPage = () => {
             <section className="full-screen-page contact-page">
                 <aside className="large-aside">Oops!</aside>
                 <article className="contact-section">
-                    <p>Looks like something is not right with the URL. Please use navigation below to find you way back.</p>     
+                    <p>It looks like something is not quite right with the URL. Please use the navigation below to find your way back.</p>     
                 </article>
             </section>
             <Navigation />
