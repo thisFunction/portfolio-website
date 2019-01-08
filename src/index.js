@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {Router , Route, Switch} from 'react-router-dom';
 import './css-reset.css';
 import './index.scss';
 import MainPage from './components/home-page/home-page'
@@ -13,7 +13,7 @@ import createHashHistory from 'history/createHashHistory';
 const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
 
 render(
-    <BrowserRouter history={hashHistory}>
+    <Router  history={hashHistory}>
         <Switch>
             <Route path="/" component={MainPage} exact />
             <Route path="/playground" component={PlaygroundPage} />
@@ -21,6 +21,6 @@ render(
             <Route path="/contact" component={ContactPage} />
             <Route component={ErrorPage} />
         </Switch>
-    </BrowserRouter>,
+    </Router >,
     document.getElementById('root')
 );
