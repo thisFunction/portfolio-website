@@ -15,6 +15,7 @@ It is deployed with [Heroku](https://www.heroku.com) and can be seen by visiting
     - Add smoothie delight site
     - Add sticky notes app
     - Add about me page
+- write tests
 
 ## Nice to haves:
  - Disappearing menu on scroll
