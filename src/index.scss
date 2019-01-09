@@ -62,5 +62,13 @@ body {
             font-size: 2.1em;
         }
     }
-
 }
+a {
+    color: $font-link-color;
+    text-decoration: none;
+
+    &:hover {
+        transition: color 0.4s ease;
+        color: $font-link-hover-color;
+    }
+} 

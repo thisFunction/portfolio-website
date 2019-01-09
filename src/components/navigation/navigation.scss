@@ -17,8 +17,6 @@
     a {
         font-family: $header-font;
         text-transform: uppercase;
-        color: $font-accent-color;
-        text-decoration: none;
         
         @media (max-width: 780px) {
             flex-direction: column;
