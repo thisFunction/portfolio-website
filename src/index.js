@@ -1,21 +1,18 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Switch} from 'react-router-dom';
-
-import './css-reset.css';
 import './index.scss';
-
-import MainPage from './components/home-page/home-page'
-import PlaygroundPage from './components/playground-page/playground-page'
-import ContactPage from './components/contact-page/contact-page'
-import ErrorPage from './components/error-page/error-page'
+import MainPage from './containers/home-page/home-page';
+import DojoPage from './containers/dojo-page/dojo-page';
+import ContactPage from './containers/contact-page/contact-page';
+import ErrorPage from './containers/error-page/error-page';
 
 render(
     <Router>
         <Switch>
             <Route path="/" component={MainPage} exact />
-            <Route path="/playground" component={PlaygroundPage} />
+            <Route path="/dojo" component={DojoPage} />
             <Route path="/contact" component={ContactPage} />
             <Route component={ErrorPage} />
         </Switch>

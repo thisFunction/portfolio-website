@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './navigation.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './navigation.scss';
 
 const Navigation = () => { 
     return (
@@ -8,13 +8,14 @@ const Navigation = () => {
         <Link to="/" >
             Home 
         </Link>
-        <Link to="/playground">
-            Playground 
+        <Link to="/dojo">
+            Dojo 
         </Link> 
         <Link to="/contact">
             Contact 
         </Link>
     </nav>
-)}
+    )
+};
 
-export default Navigation
+export default Navigation;

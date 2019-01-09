@@ -1,7 +1,11 @@
-import React from 'react'
-import myPhoto from '../../images/adam-skoczylas.jpg'
-export default (
-<article className="introduction-section">
+import React from 'react';
+import myPhoto from '../../images/adam-skoczylas.jpg';
+import FullPage from '../../components/full-page/full-page';
+import './home-page.scss';
+
+
+const homePageArticle = () => {
+    return (
         <div className="introduction-content">
                 <span className="separate-line">Hello</span>
                 <p>I'm a front-end developer who has recently relocated to Toronto, ON.</p>
@@ -10,5 +14,13 @@ export default (
                 <p>I hope you enjoy my website. Please feel free to contact me.</p>
                 <img className="adam-skoczylas-img" alt="My photograph" src={myPhoto}/>
         </div>
-</article>
-)
+    )
+};
+
+const homePage = () => {
+    return (
+        <FullPage asideTitle="adam skoczylas" mainArticle={homePageArticle()}/>
+    )
+};
+
+export default homePage;
