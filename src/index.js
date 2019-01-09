@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.scss';
 import MainPage from './containers/home-page/home-page';
 import DojoPage from './containers/dojo-page/dojo-page';

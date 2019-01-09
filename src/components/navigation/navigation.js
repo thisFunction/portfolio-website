@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './navigation.scss';
 
 const Navigation = () => { 
     return (
     <nav className="navigation">
-        <Link to="/" >
+        <NavLink exact activeClassName="activeLink" to="/" >
             Home 
-        </Link>
-        <Link to="/dojo">
+        </NavLink>
+        <NavLink exact activeClassName="activeLink" to="/dojo">
             Dojo 
-        </Link> 
-        <Link to="/contact">
+        </NavLink> 
+        <NavLink exact activeClassName="activeLink" to="/contact">
             Contact 
-        </Link>
+        </NavLink>
     </nav>
     )
 };
