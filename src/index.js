@@ -12,7 +12,7 @@ import ContactPage from './components/contact-page/contact-page'
 import ErrorPage from './components/error-page/error-page'
 
 render(
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
         <Switch>
             <Route path="/" component={MainPage} exact />
             <Route path="/playground" component={PlaygroundPage} />
