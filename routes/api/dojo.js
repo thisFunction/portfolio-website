@@ -2,19 +2,18 @@ const express = require('express');
 const router = express.Router()
 
 //Dojo Model
-
 const Dojo = require('../../models/dojo');
 
 // @route       GET api/dojo
-// @description GET All Dojo Items
+// @description GET Dojo Items
 // @access      Public
 router.get('/', (req, res) => {
     Dojo.find()
         .then(dojo => res.json(dojo))
 })
 
-// @route       GET api/dojo
-// @description GET All Dojo Items
+// @route       POST api/dojo
+// @description Create Dojo Item
 // @access      Public
 router.post('/', (req, res) => {
     const newDojo = new Dojo({
@@ -22,12 +21,17 @@ router.post('/', (req, res) => {
         age: req.body.age,
         dob: req.body.dob
     });
-
     newDojo.save().then(item => res.json(item))
-})
+});
 
-
-
-
+// @route       DELETE api/dojo/:id
+// @description Delete Dojo Item
+// @access      Public
+router.delete('/:id', (req, res) => {
+    Dojo.findById(req.params.id)
+        .then(item => item.remove())
+        .then(() => res.json({success: true}))
+        .catch(err => res.status(404).json({success: false}))
+});
 
 module.exports = router;
