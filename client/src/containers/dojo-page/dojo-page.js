@@ -4,21 +4,21 @@ import './dojo-page.scss';
 import {Container, ListGroup, ListGroupItem, Button} from 'reactstrap';
 import { CSSTransition, TransitionGroup} from 'react-transition-group';
 import uuid from 'uuid';
+import { connect } from 'react-redux';
+import {getDojoItems} from '../../actions/dojo-actions';
+import PropTypes from 'prop-types';
 
 class DojoArticle extends Component {
     constructor(props){
         super(props);
-        this.state= {
-            items: [
-                {id: uuid(), name: "Adam"},
-                {id: uuid(), name: "Mary"},
-                {id: uuid(), name: "Mike"},
-            ]
-        }
         this.addPerson = this.addPerson.bind(this);
+    }
+    componentDidMount(){
+        this.props.getDojoItems()
     }
     addPerson() {
         const name = prompt("enter person");
+        debugger
         if (name) {
             this.setState(state => ({
                 items: [...state.items, {id: uuid(), name}]
@@ -26,10 +26,9 @@ class DojoArticle extends Component {
         }
     }
     render() {
-        const items = this.state.items;
-
+        const items = this.props.items;
         return (
-            <Container>
+            <Container>               
                 <Button color="dark" style={{marginBottom: "2em"}} onClick={this.addPerson}>Add Fighter</Button>
             <ListGroup>
                 <TransitionGroup className="dojo-person">
@@ -50,17 +49,24 @@ class DojoArticle extends Component {
             </ListGroup>
             </Container>
         )  
-    }
+    }DojoPage
 }
 
-// const dojoArticle = () => {
-//    
-// };
-
-const DojoPage = () => {
+const DojoPage = (props) => {
     return (
-        <FullPage asideTitle="dojo" mainArticle={<DojoArticle />}/>
+        <FullPage asideTitle="dojo" mainArticle={<DojoArticle items={props.dojo.items} getDojoItems={props.getDojoItems}  />}/>
     )
 };
 
-export default DojoPage;
+DojoArticle.propTypes = {
+    getDojoItems: PropTypes.func.isRequired,
+    dojo: PropTypes.object
+}
+
+const mapStateToProps = (state) => {
+    return (
+        {dojo: state.dojo}
+    )
+}
+
+export default connect(mapStateToProps, { getDojoItems })(DojoPage);
