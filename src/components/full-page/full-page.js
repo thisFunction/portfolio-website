@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../../components/navigation/navigation';
 import Aside from '../aside/aside';
-import './contact-page.scss';
+import './full-page.scss';
 
 const FullPage = ({asideTitle, mainArticle}) => {
     return (

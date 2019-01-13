@@ -7,7 +7,6 @@ It is deployed with [Heroku](https://www.heroku.com) and can be seen by visiting
 
 
 ## To-do:
-- ~~Indicate current route in menu~~
 - Add animations to large aside text
 - Work on Dojo route:
     - Work on goals app
