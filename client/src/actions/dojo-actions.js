@@ -14,7 +14,6 @@ export const deleteDojoItem = (id) => {
 } 
 
 export const addDojoItem = (item) => {
-    debugger
     return {
         type: ADD_DOJO_ITEM,
         payload: item
