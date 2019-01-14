@@ -1,16 +1,11 @@
-import {
-	GET_DOJO_ITEMS,
-	ADD_DOJO_ITEM,
-	DELETE_DOJO_ITEM,
-	ITEMS_LOADING
-} from "../actions/types";
+import { GET_DOJO_ITEMS, ADD_DOJO_ITEM, DELETE_DOJO_ITEM, ITEMS_LOADING } from "../actions/types";
 
 const initialState = {
 	items: [],
 	loading: false
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
 	switch (action.type) {
 		case GET_DOJO_ITEMS:
 			return {

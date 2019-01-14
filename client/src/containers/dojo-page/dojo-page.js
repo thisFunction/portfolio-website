@@ -1,14 +1,10 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import FullPage from "../../components/full-page/full-page";
 import "./dojo-page.scss";
-import {Container, ListGroup, ListGroupItem, Button} from "reactstrap";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
-import {connect} from "react-redux";
-import {
-	getDojoItems,
-	deleteDojoItem,
-	addDojoItem
-} from "../../actions/dojo-actions";
+import { Container, ListGroup, ListGroupItem, Button } from "reactstrap";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { connect } from "react-redux";
+import { getDojoItems, deleteDojoItem, addDojoItem } from "../../actions/dojo-actions";
 import PropTypes from "prop-types";
 import ItemModal from "../../components/item-modal/item-modal";
 
@@ -38,7 +34,7 @@ class DojoArticle extends Component {
 
 				<ListGroup>
 					<TransitionGroup className="dojo-person">
-						{items.map(({_id, name}) => (
+						{items.map(({ _id, name }) => (
 							<CSSTransition
 								key={_id}
 								timeout={500}
@@ -87,10 +83,10 @@ DojoArticle.propTypes = {
 };
 
 const mapStateToProps = state => {
-	return {dojo: state.dojo};
+	return { dojo: state.dojo };
 };
 
 export default connect(
 	mapStateToProps,
-	{getDojoItems, deleteDojoItem, addDojoItem}
+	{ getDojoItems, deleteDojoItem, addDojoItem }
 )(DojoPage);
