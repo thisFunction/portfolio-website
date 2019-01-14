@@ -7,6 +7,8 @@ It is deployed with [Heroku](https://www.heroku.com) and can be seen by visiting
 
 
 ## To-do:
+- Add scroll state on home page
+    - into section stays scrolled down after changing routes
 - ~~Indicate current route in menu~~
 - Add animations to large aside text
 - Work on Dojo route:

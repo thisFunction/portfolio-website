@@ -13,6 +13,7 @@ const FullPage = ({asideTitle, mainArticle}) => {
                 </article>
             </section>
             <Navigation />
+
         </div>
     )
 };
