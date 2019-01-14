@@ -1,3 +1,5 @@
 export const GET_DOJO_ITEMS = "GET_DOJO_ITEMS";
 export const ADD_DOJO_ITEM = "ADD_DOJO_ITEM";
 export const DELETE_DOJO_ITEM = "DELETE_DOJO_ITEM";
+export const ITEMS_LOADING = "ITEMS_LOADING";
+
