@@ -1,5 +1,9 @@
 .dojo-list {
     padding: 1em 1em 1em 0;
+
+    li {
+        text-transform: capitalize;
+    }
 }
 
 hr.bottom {
