@@ -8,11 +8,12 @@
     justify-content: space-around;
     padding: 1em;
     background: $background-color;
+    padding-top: 1em;
 
     @media (max-width: 780px) {
         flex-direction: column;
         width: 90%;
-        padding: 0.8em 10%;
+        padding: 1em 10%;
     }
     a {
         font-family: $header-font;
@@ -21,7 +22,6 @@
         @media (max-width: 780px) {
             flex-direction: column;
             width: 90%;
-            margin-bottom: .3em;
         }
 
         &.activeLink {

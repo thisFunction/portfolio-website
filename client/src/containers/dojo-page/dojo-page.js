@@ -38,7 +38,7 @@ class DojoArticle extends Component {
 				<ol>
 					<li>a hall or space for immersive learning or meditation</li>
 					<li>a place where I showcase things I'm currently working on, including anything from training material to random meditations on life.</li>
-					<li>always a work in progress....</li>
+					<li>always a work in progress...</li>
 				</ol>
 				<hr className="bottom"></hr>
 
