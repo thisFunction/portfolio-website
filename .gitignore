@@ -13,6 +13,9 @@
 /client/build
 /build
 
+#secret
+/config/keys.js
+
 # misc
 .DS_Store
 .env.local

@@ -33,30 +33,46 @@ class DojoArticle extends Component {
 		return (
 			<div className="dojo-page">
 				<span className="separate-line">/dōˈjō/</span>
-				<hr></hr>
+				<hr />
 				<p className="italics">noun</p>
 				<ol>
-					<li>a hall or space for immersive learning or meditation</li>
-					<li>a place where I showcase things I'm currently working on, including anything from training material to random meditations on life.</li>
+					<li>
+						a hall or space for immersive learning or meditation
+					</li>
+					<li>
+						a place where I showcase things I'm currently working
+						on, including anything from training material to random
+						meditations on life.
+					</li>
 					<li>always a work in progress...</li>
 				</ol>
-				<hr className="bottom"></hr>
+				<hr className="bottom" />
 
 				<span className="separate-line">MERN</span>
-				<p>This website is a full-stack app created with mongoDB, express, react.js, and node.js.</p>
-				<p>Ultimately, it will be used to serve content from server to the dojo. At the moment, it allows you to add or remove items in my mongoDB database:</p>	
+				<p>
+					This website is a full-stack app created with mongoDB,
+					express, react.js, and node.js.
+				</p>
+				<p>
+					Ultimately, it will be used to serve content from server to
+					the dojo. At the moment, it allows you to add or remove
+					items in my mongoDB database:
+				</p>
 				<ItemModal />
 				<ul className="dojo-list">
 					{items.map(({_id, name}) => (
 						<li key={_id}>
-							<button className="remove" onClick={this.removePerson.bind(this, _id)}>
+							<button
+								className="remove"
+								onClick={this.removePerson.bind(this, _id)}
+							>
 								&times;
 							</button>
 							{name}
 						</li>
 					))}
 				</ul>
-				<hr></hr>
+				<hr />
 			</div>
 		);
 	}
