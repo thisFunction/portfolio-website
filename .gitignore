@@ -13,7 +13,7 @@
 /client/build
 /build
 
-#secret
+#config folder
 /config/keys.js
 
 # misc
