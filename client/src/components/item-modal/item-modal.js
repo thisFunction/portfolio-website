@@ -41,16 +41,17 @@ class ItemModal extends Component {
 		return (
 			<div>
 				<button className="button" onClick={this.handleOpenModal}>
-					Add Item
+					Add Trainee
 				</button>
 				<Modal
+					className="modal"
 					onRequestClose={this.handleCloseModal}
 					shouldCloseOnOverlayClick={true}
 					isOpen={this.state.showModal}
 					toggle={this.toggle}
 					addDojoItem={this.addDojoItem}
 				>
-					<h1>Add to training</h1>
+					<h1>Add person to dojo</h1>
 					<form onSubmit={this.onSubmit}>
 						<label htmlFor="item">Item</label>
 						<input

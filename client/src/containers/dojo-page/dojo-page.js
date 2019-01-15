@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import FullPage from "../../components/full-page/full-page";
 import "./dojo-page.scss";
-import { Container, ListGroup, ListGroupItem, Button } from "reactstrap";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { connect } from "react-redux";
-import { getDojoItems, deleteDojoItem, addDojoItem } from "../../actions/dojo-actions";
+import {connect} from "react-redux";
+import {
+	getDojoItems,
+	deleteDojoItem,
+	addDojoItem
+} from "../../actions/dojo-actions";
 import PropTypes from "prop-types";
 import ItemModal from "../../components/item-modal/item-modal";
 
@@ -29,41 +31,36 @@ class DojoArticle extends Component {
 	render() {
 		const items = this.props.items;
 		return (
-			
-			<Container>
-				<dl>
-					<dt>dojo <span>noun</span> <span>(dōˈjō)</span> </dt>
+			<article>
+				<span className="separate-line">/dōˈjō/</span>
+				<hr></hr>
 
-					<dd>Definition: a hall or space for immersive learning or meditation</dd>
-				</dl>
+				<p className="italics">noun</p>
+				<ol>
+					<li>a hall or space for immersive learning or meditation</li>
+					<li>a place where I showcase things I'm currently working on, including anything from training material to random meditations on life.</li>
+					<li>always a work in progress....</li>
+				</ol>
+				<hr className="bottom"></hr>
 
-				<p>Welcome to my dojo. This is a place for me to practice the skills it takes to become a master front-end developer.</p>
+
+				<span className="separate-line">MERN</span>
+				<p>This site is a full-stack app created with mongoDB, express, react.js, and node.js</p>
+				<p>It allows users to do things like add or remove items in my mongoDB database:</p>
 				<ItemModal />
-				<ListGroup>
-					<TransitionGroup className="dojo-person">
-						{items.map(({ _id, name }) => (
-							<CSSTransition
-								key={_id}
-								timeout={500}
-								classNames="dojo-person-fade"
-							>
-								<ListGroupItem>
-									<Button
-										className="remove-person"
-										onClick={this.removePerson.bind(
-											this,
-											_id
-										)}
-									>
-										&times;
-									</Button>
-									{name}
-								</ListGroupItem>
-							</CSSTransition>
-						))}
-					</TransitionGroup>
-				</ListGroup>
-			</Container>
+				<ul className="dojo-list">
+					{items.map(({_id, name}) => (
+						<li key={_id}>
+							<button className="remove" onClick={this.removePerson.bind(this, _id)}>
+								&times;
+							</button>
+							{name}
+						</li>
+					))}
+				</ul>
+				
+
+			</article>
 		);
 	}
 }
@@ -90,10 +87,10 @@ DojoArticle.propTypes = {
 };
 
 const mapStateToProps = state => {
-	return { dojo: state.dojo };
+	return {dojo: state.dojo};
 };
 
 export default connect(
 	mapStateToProps,
-	{ getDojoItems, deleteDojoItem, addDojoItem }
+	{getDojoItems, deleteDojoItem, addDojoItem}
 )(DojoPage);
