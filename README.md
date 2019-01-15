@@ -7,6 +7,9 @@ It is deployed with [Heroku](https://www.heroku.com) and can be seen by visiting
 
 
 ## To-do:
+- Add scroll state on home page
+    - intro section stays scrolled down after changing routes
+- ~~Indicate current route in menu~~
 - Add animations to large aside text
 - Work on Dojo route:
     - Work on goals app
@@ -14,6 +17,7 @@ It is deployed with [Heroku](https://www.heroku.com) and can be seen by visiting
     - Add smoothie delight site
     - Add sticky notes app
     - Add about me page
+- write tests
 
 ## Nice to haves:
  - Disappearing menu on scroll
