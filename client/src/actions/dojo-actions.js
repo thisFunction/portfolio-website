@@ -1,4 +1,9 @@
-import { GET_DOJO_ITEMS, ADD_DOJO_ITEM, DELETE_DOJO_ITEM, ITEMS_LOADING } from "./types";
+import {
+	GET_DOJO_ITEMS,
+	ADD_DOJO_ITEM,
+	DELETE_DOJO_ITEM,
+	ITEMS_LOADING
+} from "./types";
 import axios from "axios";
 
 export const getDojoItems = () => dispatch => {

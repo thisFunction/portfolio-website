@@ -1,23 +1,92 @@
-@import 'variables';
+@import "variables";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, main, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+main,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -26,23 +95,37 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, main, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-    box-sizing: border-box;
+article,
+main,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+	box-sizing: border-box;
 }
 body {
 	line-height: 1;
 }
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
 	content: none;
 }
 table {
@@ -52,78 +135,105 @@ table {
 /* ---End of css reset--- */
 
 p {
-    font-size: 1em;
-    line-height: 1.4em;
-    margin-bottom: 1.2em;
-
-    @media (max-width: 780px) {
-        font-size: 0.8em;
-    }
+	line-height: 1.4em;
+	margin-bottom: 1.2em;
 }
 
 html,
 body {
-    overflow: hidden;
-    height: 100%;
-    font-size: 1.3em;
+	font-size: 1.2em;
+	overflow: hidden;
+	height: 100%;
 }
 
 .app {
-    height: 100%;
+	height: 100%;
 }
 
 #root {
-    font-family: $main-font;
-    height: 100%;
-    color: $font-color;
-    background: $background-color;
+	font-family: $main-font;
+	height: 100%;
+	color: $font-color;
+	background: $background-color;
 }
 
 a {
-    color: $font-link-color;
-    text-decoration: none;
-    &:hover {
-        transition: color 0.4s ease;
-        color: $font-link-hover-color;
-    }
+	color: $font-link-color;
+	text-decoration: none;
+	&:hover {
+		transition: color 0.4s ease;
+		color: $font-link-hover-color;
+	}
 }
 
 .italics {
-    font-style: italic;
+	font-style: italic;
 }
 
 button {
-    margin-top: .3em;
-    margin-right: .3em;
-    color: $font-link-color;
-    cursor: pointer;
-    font-size: 1em;
-    border: 1px solid;
-    background: $background-color;
-    display: block;
-    padding: .6em;
-    border-radius: .2em;
-    &:hover {
-        color: $font-color;
-        background: $font-link-color;
-        border-color: $font-link-color; 
-    }
+	font-size: inherit;
+	margin-top: 0.3em;
+	margin-right: 0.3em;
+	color: $font-link-color;
+	cursor: pointer;
+	border: 1px solid;
+	background: $background-color;
+	display: block;
+	padding: 0.6em;
+	border-radius: 0.2em;
+	&:hover {
+		color: $font-color;
+		background: $font-link-color;
+		border-color: $font-link-color;
+	}
 }
 
 .remove {
-    padding: 0;
-    height: 35px;
-    width: 35px;
-    display: inline-block;
-    box-shadow: none;
+	padding: 0;
+	height: 35px;
+	width: 35px;
+	display: inline-block;
+	box-shadow: none;
 }
 
 ol {
-    list-style-type: decimal;
+	list-style-type: decimal;
 
-    li {
-        line-height: 1.2em;
-        margin-top: .6em;
-        margin-left: 1em;
-    }
+	li {
+		line-height: 1.2em;
+		margin-top: 0.6em;
+		margin-left: 1em;
+	}
+}
+
+ul {
+	font-family: $header-font;
+
+}
+
+form {
+	font-size: 1.2em;
+	font-family: $header-font;
+
+	label {
+		margin-right: 1.2em;
+	}
+
+	input {
+		font-family: $header-font;
+		font-size: 1.2em;
+		color: $font-color;
+		background-color: transparent;
+		border: 0;
+		border-bottom: 1px solid;
+		padding: 0.2em;
+	}
+
+	button {
+		margin-top: 2em;
+	}
+}
+
+button {
+	font-family: $header-font;
 }

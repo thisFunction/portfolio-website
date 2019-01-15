@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { addDojoItem } from "../../actions/dojo-actions";
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import {addDojoItem} from "../../actions/dojo-actions";
 import Modal from "react-modal";
-import uuid from "uuid";
+import './dojo-modal.scss';
+
 Modal.setAppElement("#root");
 
 class ItemModal extends Component {
@@ -12,11 +13,11 @@ class ItemModal extends Component {
 	};
 
 	handleOpenModal = () => {
-		this.setState({ showModal: true });
+		this.setState({showModal: true});
 	};
 
 	handleCloseModal = () => {
-		this.setState({ showModal: false });
+		this.setState({showModal: false});
 	};
 
 	onChange = e => {
@@ -29,10 +30,9 @@ class ItemModal extends Component {
 		e.preventDefault();
 
 		const newItem = {
-			id: uuid(),
 			name: this.state.name
-        };
-       
+		};
+
 		this.props.addDojoItem(newItem);
 		this.handleCloseModal();
 	};
@@ -41,27 +41,26 @@ class ItemModal extends Component {
 		return (
 			<div>
 				<button className="button" onClick={this.handleOpenModal}>
-					Add Trainee
+					add member
 				</button>
 				<Modal
-					className="modal"
+					className="dojo-modal"
 					onRequestClose={this.handleCloseModal}
 					shouldCloseOnOverlayClick={true}
 					isOpen={this.state.showModal}
 					toggle={this.toggle}
 					addDojoItem={this.addDojoItem}
 				>
-					<h1>Add person to dojo</h1>
 					<form onSubmit={this.onSubmit}>
-						<label htmlFor="item">Item</label>
+						<label htmlFor="item">name:</label> 
 						<input
+							autoComplete="off"
 							type="text"
 							name="name"
 							id="item"
-							placeholder="Add training"
 							onChange={this.onChange}
 						/>
-						<button>Add training</button>
+						<button>add member</button>
 					</form>
 				</Modal>
 			</div>
@@ -69,6 +68,9 @@ class ItemModal extends Component {
 	}
 }
 const mapStateToProps = state => ({
-    item: state.item
-})
-export default connect(mapStateToProps, {addDojoItem})(ItemModal);
+	item: state.item
+});
+export default connect(
+	mapStateToProps,
+	{addDojoItem}
+)(ItemModal);

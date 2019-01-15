@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.ReactModal__Overlay {
+	background-color: rgba(0, 0, 0, .85) !important;
+}
+.dojo-modal {
+	position: relative;
+	background: $background-color;
+	color: $font-color;
+	border: 5px solid;
+	width: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	border-radius: 1em;
+}

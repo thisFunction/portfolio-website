@@ -44,7 +44,7 @@ class DojoArticle extends Component {
 
 				<span className="separate-line">MERN</span>
 				<p>This website is a full-stack app created with mongoDB, express, react.js, and node.js.</p>
-				<p>It allows you to do things like add or remove items in my mongoDB database:</p>
+				<p>Ulitmately, it will be used to serve content from server to the dojo. At the moment, it allows you to add or remove items in my mongoDB database:</p>	
 				<ItemModal />
 				<ul className="dojo-list">
 					{items.map(({_id, name}) => (
@@ -56,8 +56,7 @@ class DojoArticle extends Component {
 						</li>
 					))}
 				</ul>
-				
-
+				<hr></hr>
 			</div>
 		);
 	}
