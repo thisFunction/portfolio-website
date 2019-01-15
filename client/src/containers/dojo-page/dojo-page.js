@@ -29,9 +29,16 @@ class DojoArticle extends Component {
 	render() {
 		const items = this.props.items;
 		return (
+			
 			<Container>
-				<ItemModal />
+				<dl>
+					<dt>dojo <span>noun</span> <span>(dōˈjō)</span> </dt>
 
+					<dd>Definition: a hall or space for immersive learning or meditation</dd>
+				</dl>
+
+				<p>Welcome to my dojo. This is a place for me to practice the skills it takes to become a master front-end developer.</p>
+				<ItemModal />
 				<ListGroup>
 					<TransitionGroup className="dojo-person">
 						{items.map(({ _id, name }) => (

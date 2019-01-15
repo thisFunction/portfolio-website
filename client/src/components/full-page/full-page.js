@@ -8,7 +8,7 @@ const FullPage = ({asideTitle, mainArticle}) => {
 		<div className="app">
 			<section className="full-screen-page">
 				<Aside title={asideTitle} />
-				<article className="main-article">{mainArticle}</article>
+				<main className="main-article">{mainArticle}</main>
 			</section>
 			<Navigation />
 		</div>
