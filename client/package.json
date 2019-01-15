@@ -1,6 +1,7 @@
 {
   "author": "Adam Skoczyls",
   "name": "portfolio-website",
+  "homepage" : "http://adam-skoczylas.herokuapp.com",
   "version": "2.0.0",
   "engines": {
     "node": "10.14.1"
