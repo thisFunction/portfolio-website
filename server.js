@@ -2,7 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
+
 const dojo = require("./routes/api/dojo");
+const users = require("./routes/api/users");
+const profile = require("./routes/api/profile");
+const posts = require("./routes/api/posts");
 
 const app = express();
 
@@ -14,15 +18,15 @@ const db = process.env.MONGODB_URI || require("./config/keys").mongoURI;
 
 //Connect to MongoDB
 mongoose
-	.connect(
-		db,
-		{useNewUrlParser: true}
-	)
+	.connect(db, {useNewUrlParser: true})
 	.then(() => console.log("MongoDB Connected..."))
 	.catch(err => console.log(err));
 
 //Use routes
 app.use("/api/dojo", dojo);
+app.use("/api/users", users);
+app.use("/api/profile", profile);
+app.use("/api/posts", posts);
 
 //Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
