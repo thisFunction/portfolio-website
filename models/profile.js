@@ -3,18 +3,19 @@ const Schema = mongoose.Schema;
 
 //Create schema
 const ProfileSchema = new Schema({
-    title: {
+    name: {
         type: String,
         required: true
     },
-    body: {
-        type: String,
+    dob: {
+        type: Date,
         required: true
     },
-    date: {
+    city: {
         type: Date,
         default: Date.now()
-    }
+    },
+    
 });
 
 const Posts = mongoose.model('Posts', PostsSchema);
