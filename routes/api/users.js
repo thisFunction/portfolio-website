@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const bcrypt = require('bcryptjs');
 
 const User = require('../../models/user');
-
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
 
 //@route    get api/users/test
 //@desc     Tests users route
 //@access   Public
 router.get('/test', (req, res) => res.json({msg: "yo"}))
 
+//@route    post api/users/test
+//@desc     Register a user
+//@access   Public
 router.post('/register', (req, res) => {
     User.findOne({email: req.body.email})
         .then(user => {
@@ -24,7 +25,16 @@ router.post('/register', (req, res) => {
                     password: req.body.password
                 });
 
-
+                bcrypt.genSalt(10, (err, salt)=> {
+                    bcrypt.hash(newUser.password, salt, (err, hash)=> {
+                        if (err) throw err;
+                        newUser.password = hash;
+                        newUser.save()
+                            .then(user => res.json(user))
+                            .catch(err => console.log(err))
+                    })
+                })
+                
             }
         })
 });
