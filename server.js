@@ -5,9 +5,9 @@ const passport = require("passport");
 const path = require("path");
 
 const dojo = require("./routes/api/dojo");
-const users = require("./routes/api/users");
+const user = require("./routes/api/users");
 const profile = require("./routes/api/profile");
-const posts = require("./routes/api/posts");
+const post = require("./routes/api/posts");
 
 const app = express();
 
@@ -33,9 +33,9 @@ require('./config/passport')(passport);
 
 //Use routes
 app.use("/api/dojo", dojo);
-app.use("/api/users", users);
+app.use("/api/users", user);
 app.use("/api/profile", profile);
-app.use("/api/posts", posts);
+app.use("/api/posts", post);
 
 //Serve static assets if in production
 if (process.env.NODE_ENV === "production") {

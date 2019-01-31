@@ -9,4 +9,4 @@ const DojoSchema = new Schema({
     }
 });
 
-module.exports = Dojo = mongoose.model('Dojo', DojoSchema);
+module.exports = Dojo = mongoose.model('dojo', DojoSchema);
