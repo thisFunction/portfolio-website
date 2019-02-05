@@ -28,27 +28,54 @@ router.get("/", passport.authenticate("jwt", {session: false}), (req, res) => {
 });
 
 //@route    POST api/profile/
-//@desc     Create user profile
+//@desc     Create or edit user profile
 //@access   Private
 router.post("/", passport.authenticate("jwt", {session: false}), (req, res) => {
-    const newProfileFields = {
-        handle: req.body.handle,
-        website: req.body.website,
-        company: req.body.company,
-        location: req.body.location,
-        bio: req.body.bio,
-        status: req.body.status,
-        githubusername: req.body.githubusername,
-        skills() {
-            if (typeof req.body.skills !== undefined) {
-                return req.body.skills.split(',')
+	const newProfileFields = {
+		handle: req.body.handle,
+		website: req.body.website,
+		company: req.body.company,
+		location: req.body.location,
+		bio: req.body.bio,
+		status: req.body.status,
+		githubusername: req.body.githubusername
+	};
+	if (typeof req.body.skills !== "undefined") {
+		newProfileFields.skills = req.body.skills.split(",");
+	}
+	newProfileFields.social = {};
+	if (typeof req.body.linkedin) newProfileFields.social.linkedin = req.body.linkedin;
+	if (typeof req.body.youtube) newProfileFields.social.youtube = req.body.youtube;
+	if (typeof req.body.twitter) newProfileFields.social.twitter = req.body.twitter;
+	if (typeof req.body.facebook) newProfileFields.social.facebook = req.body.facebook;
+	if (typeof req.body.instagram) newProfileFields.social.instagram = req.body.instagram;
+    
+
+    Profile.findOne({user: req.user.id })
+        .then(profile => {
+            if (profile) {
+                //update
+                Profile.findOneAndUpdate (
+                    {user: req.user.id},
+                    {$set: profileFields},
+                    {new: true}
+                ).then(profile => res.json(profile))
+            } else {
+                //create
+
+                //check if handle exists
+                Profile.findOne({handle: newProfileFields.handle}).then(profile => {
+                    if (profile) {
+                        errors.handle = "Handle already exists";
+                        res.status(400).json(errors);
+                    } else {
+                        //save profile
+                        new Profile(profileFields).save().then(profile => res.json(profile))
+                    }
+                })
             }
-        },
-        
-
-    }
-    newProfileFields.user = req.user
+        })
+    newProfileFields.user = req.user;
 });
-
 
 module.exports = router;
