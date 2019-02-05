@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose");
 const passport = require("passport");
+
+//Load Validation
+const validateProfileInput = require('../../validation/profile')
 
 //Load models
 const Profile = require("../../models/profile");
@@ -31,6 +33,13 @@ router.get("/", passport.authenticate("jwt", {session: false}), (req, res) => {
 //@desc     Create or edit user profile
 //@access   Private
 router.post("/", passport.authenticate("jwt", {session: false}), (req, res) => {
+    const {errors, isValid} = validateProfileInput(req.body);
+
+    if (!isValid) {
+        //return any errors with 400 status
+        return res.status(400).json(errors)
+    }
+
 	const newProfileFields = {
 		handle: req.body.handle,
 		website: req.body.website,
@@ -57,12 +66,10 @@ router.post("/", passport.authenticate("jwt", {session: false}), (req, res) => {
                 //update
                 Profile.findOneAndUpdate (
                     {user: req.user.id},
-                    {$set: profileFields},
+                    {$set: newProfileFields},
                     {new: true}
                 ).then(profile => res.json(profile))
             } else {
-                //create
-
                 //check if handle exists
                 Profile.findOne({handle: newProfileFields.handle}).then(profile => {
                     if (profile) {
@@ -70,7 +77,7 @@ router.post("/", passport.authenticate("jwt", {session: false}), (req, res) => {
                         res.status(400).json(errors);
                     } else {
                         //save profile
-                        new Profile(profileFields).save().then(profile => res.json(profile))
+                        new Profile(newProfileFields).save().then(profile => res.json(profile))
                     }
                 })
             }
