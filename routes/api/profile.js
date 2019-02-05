@@ -19,7 +19,8 @@ router.get("/test", (req, res) => res.json({msg: "yo"}));
 //@access   Private
 router.get("/", passport.authenticate("jwt", {session: false}), (req, res) => {
 	const errors = {};
-	Profile.findOne({user: req.user.id})
+    Profile.findOne({user: req.user.id})
+        .populate('user', 'name')
 		.then(profile => {
 			if (!profile) {
 				errors.noProfile = "There is no profile for this user";

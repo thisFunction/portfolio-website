@@ -5,7 +5,7 @@ const passport = require("passport");
 const path = require("path");
 
 const dojo = require("./routes/api/dojo");
-const user = require("./routes/api/users");
+const user = require("./routes/api/user");
 const profile = require("./routes/api/profile");
 const post = require("./routes/api/posts");
 
@@ -33,7 +33,7 @@ require('./config/passport')(passport);
 
 //Use routes
 app.use("/api/dojo", dojo);
-app.use("/api/users", user);
+app.use("/api/user", user);
 app.use("/api/profile", profile);
 app.use("/api/posts", post);
 
