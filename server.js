@@ -5,7 +5,7 @@ const passport = require("passport");
 const path = require("path");
 
 const dojo = require("./routes/api/dojo");
-//const user = require("./routes/api/user");
+const user = require("./routes/api/user");
 const profile = require("./routes/api/profile");
 const post = require("./routes/api/posts");
 
