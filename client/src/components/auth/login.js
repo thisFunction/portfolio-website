@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import axios from 'axios';
 
 class Login extends Component {
 	constructor() {
@@ -8,14 +9,12 @@ class Login extends Component {
 			password: "",
 			errors: {}
 		};
-        this.onChange = this.onChange.bind(this);
-		this.onSubmit = this.onSubmit.bind(this);
         
 	}
-	onChange(e) {
-		this.setState({ [e.target.name]: e.target.value });
+    onChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
     }
-    onSubmit(e){
+    onSubmit = (e) => {
         e.preventDefault();
 
         const loginUser = {
@@ -43,7 +42,7 @@ class Login extends Component {
                         name="password"
                         value={this.state.password}
                         onChange={this.onChange}
-                        autoComplete="new-password"
+                        autoComplete="current-password"
                     /> <br/> 
                     <input type="submit"/>
 				</form>
