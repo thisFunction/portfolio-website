@@ -8,7 +8,7 @@
 
 	.large-aside,
 	.main-article {
-		width: 50%;
+		width: 40%;
 		padding: 5%;
 		position: absolute;
 		@media (max-width: 780px) {
@@ -40,12 +40,12 @@
 			-webkit-overflow-scrolling: touch;
 			padding-bottom: 40%;
 
-			@media (min-width: 780px) {
+			@media (min-width: 781px) {
 				padding-bottom: 25%;
 			}
 		}
-		@media (min-width: 780px) {
-			padding-left: 50%;
+		@media (min-width: 781px) {
+			padding-left: 45%;
 		}
 	}
 }
