@@ -37,7 +37,8 @@ router.post("/login", (req, res) => {
 				const payload = {id: user.id, name: user.name};
 				//sign token
 
-				const secretOrKey = process.env.SECRET_OR_KEY || require("../../config/keys").secretOrKey
+				const secretOrKey = process.env.SECRET_OR_KEY !== undefined ? process.env.SECRET_OR_KEY : require("../../config/keys").secretOrKey
+
 				jwt.sign(
 					payload,
 					secretOrKey,

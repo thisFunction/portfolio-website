@@ -21,7 +21,11 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password,
         }
-        console.log(loginUser)
+        axios.post('/api/user/login', loginUser)
+        .then(result => {
+            console.log(result.data)
+        })
+        .catch(error => console.log(error))
     }
 	render() {
 		return (
