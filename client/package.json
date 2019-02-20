@@ -6,9 +6,7 @@
 	"engines": {
 		"node": "10.14.1"
 	},
-	"/api/*": {
-		"target": "https://localhost:5000"
-	},
+	"proxy": "https://localhost:5000",
 	"dependencies": {
 		"axios": "^0.18.0",
 		"react": "^16.7.0",
