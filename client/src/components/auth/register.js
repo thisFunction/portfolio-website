@@ -59,7 +59,7 @@ class Register extends Component {
                         onChange={this.onChange}
                         autoComplete="email"
                     />
-                    {errors.name && (<div className="invalid-feedback">{errors.email}</div>)}
+                    {errors.email && (<div className="invalid-feedback">{errors.email}</div>)}
 					<br />
 					<label>Password</label>
 					<input
@@ -72,7 +72,7 @@ class Register extends Component {
                         onChange={this.onChange}
                         autoComplete="new-password"
                     />
-                    {errors.name && (<div className="invalid-feedback">{errors.password}</div>)}
+                    {errors.password && (<div className="invalid-feedback">{errors.password}</div>)}
                     <br/> 
                     <input type="submit"/>
 				</form>
