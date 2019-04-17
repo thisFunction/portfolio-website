@@ -9,12 +9,12 @@ const passport = require("passport");
 const validateLoginInput = require("../../validation/login");
 const validateRegisterInput = require("../../validation/registration");
 
-//@route    get api/users/test
-//@desc     Tests users route
+//@route    get api/user/test
+//@desc     Tests user route
 //@access   Public
 router.get("/test", (req, res) => res.json({msg: "yo"}));
 
-//@route    post api/users/login
+//@route    post api/user/login
 //@desc     Login user / return JWTToken
 //@access   Public
 router.post("/login", (req, res) => {
@@ -58,7 +58,7 @@ router.post("/login", (req, res) => {
 	});
 });
 
-//@route    post api/users/test
+//@route    post api/user/register
 //@desc     Register a user
 //@access   Public
 router.post("/register", (req, res) => {
@@ -92,7 +92,7 @@ router.post("/register", (req, res) => {
 	});
 });
 
-//@route    post api/users/current
+//@route    post api/user/current
 //@desc     Return current user
 //@access   Private
 router.get(
