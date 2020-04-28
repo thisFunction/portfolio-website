@@ -41,7 +41,7 @@ class ItemModal extends Component {
 		return (
 			<div>
 				<button className="button" onClick={this.handleOpenModal}>
-					add member
+					add item
 				</button>
 				<Modal
 					className="dojo-modal"
@@ -52,7 +52,7 @@ class ItemModal extends Component {
 					addDojoItem={this.addDojoItem}
 				>
 					<form onSubmit={this.onSubmit}>
-						<label htmlFor="item">name:</label> 
+						<label htmlFor="item">item:</label> 
 						<input
 							autoComplete="off"
 							type="text"
@@ -60,7 +60,7 @@ class ItemModal extends Component {
 							id="item"
 							onChange={this.onChange}
 						/>
-						<button>add member</button>
+						<button>add item</button>
 					</form>
 				</Modal>
 			</div>

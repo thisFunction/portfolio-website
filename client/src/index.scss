@@ -135,7 +135,7 @@ table {
 /* ---End of css reset--- */
 
 p {
-	line-height: 1.4em;
+	line-height: 1.48em;
 	margin-bottom: 1.2em;
 }
 
@@ -166,14 +166,16 @@ a {
 	}
 }
 
+code {
+	font-family: monospace;
+}
+
 .italics {
 	font-style: italic;
 }
 
 button {
 	font-size: inherit;
-	margin-top: 0.3em;
-	margin-right: 0.3em;
 	color: $font-link-color;
 	cursor: pointer;
 	border: 1px solid;
@@ -226,7 +228,8 @@ form {
 		background-color: transparent;
 		border: 0;
 		border-bottom: 1px solid;
-		padding: 0.2em;
+		margin-top: 0.8em;
+		width: 100%;
 	}
 
 	button {

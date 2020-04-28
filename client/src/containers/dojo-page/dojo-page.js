@@ -72,7 +72,38 @@ class DojoArticle extends Component {
 						</li>
 					))}
 				</ul>
-				<hr />
+				<hr className="bottom" />
+
+				<span className="separate-line">Articles</span>
+				<p>I enjoy writing articles that might help developers coming into 
+					the Ember ecosystem. Currently, I'm writing an in depth explanation of 
+					ember-data's <code>store.push()</code> and <code>store.pushPayload()</code> methods. 
+				</p>
+				<p>
+					In the meantime, you can enjoy these articles:
+				</p>
+				<p>
+					<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@skocadam/ember-cli-mirage-lets-build-a-kick-ass-server-and-mock-database-2854a75b14ff">
+						Ember-CLI-Mirage: Let’s build a kick-ass server and mock database <span aria-label="surfing emoji" role="img">🏄</span>
+					</a>
+					</p>
+				<p>
+					<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@skocadam/ember-data-turn-frustration-into-celebration-52891fdf3df8">
+						Ember-data: Turn Frustration <span aria-label="angry emoji" role="img">🤬</span> into Celebration <span aria-label="celebration emoji" role="img">🎉</span>
+					</a>
+				</p>
+				<hr className="bottom" />
+				<span className="separate-line">Learning</span>
+
+				<p>
+					I love that JavaScript frameworks and the language itself keeps evolving at a very fast pace.
+					Being a constant learner drives my passion for software development.</p>
+				<p>
+					At the moment I'm learning from the following course:
+				</p>
+				<a target="_blank" rel="noopener noreferrer" href="https://www.udemy.com/course/understanding-typescript/">
+					Understanding Typescript - 2020 Edition
+				</a>	
 			</div>
 		);
 	}
