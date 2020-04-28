@@ -97,7 +97,8 @@ class DojoArticle extends Component {
 
 				<p>
 					I love that JavaScript frameworks and the language itself keeps evolving at a very fast pace.
-					Being a constant learner drives my passion for software development.</p>
+					Being a constant learner drives my passion for software development.
+				</p>
 				<p>
 					At the moment I'm learning from the following course:
 				</p>
