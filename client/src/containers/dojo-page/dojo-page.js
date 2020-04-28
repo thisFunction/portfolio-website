@@ -80,7 +80,7 @@ class DojoArticle extends Component {
 					ember-data's <code>store.push()</code> and <code>store.pushPayload()</code> methods. 
 				</p>
 				<p>
-					In the meantime, you can enjoy these articles:
+					In the meantime, you can enjoy these finished articles:
 				</p>
 				<p>
 					<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@skocadam/ember-cli-mirage-lets-build-a-kick-ass-server-and-mock-database-2854a75b14ff">
