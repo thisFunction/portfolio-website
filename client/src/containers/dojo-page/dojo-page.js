@@ -54,9 +54,9 @@ class DojoArticle extends Component {
 					express, react.js, and node.js.
 				</p>
 				<p>
-					Ultimately, it will be used to serve content from server to
-					the dojo. At the moment, it allows you to add or remove
-					items in my mongoDB database:
+					Ultimately, it will be used to serve content like my articles from the server to
+					the dojo. At the moment, it allows me to do silly things like to add or remove
+					items in my mongoDB database.
 				</p>
 				<ItemModal />
 				<ul className="dojo-list">
