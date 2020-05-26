@@ -1,0 +1,21 @@
+.dojo {
+    position: relative;
+    padding: 5% 0 calc(5% + 80px);
+
+    .dojo-list {
+        padding: 1em 1em 1em 0;
+    
+        li {
+            text-transform: capitalize;
+            margin-bottom: 0.6em;
+        }
+    
+        button {
+            margin-right: 0.6em;
+        } 
+    }
+    
+    hr.bottom {
+        margin-bottom: 4em;
+    }
+}

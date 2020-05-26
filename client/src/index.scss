@@ -112,6 +112,7 @@ section {
 }
 body {
 	line-height: 1;
+	overflow-x: hidden;
 }
 ol,
 ul {
@@ -142,20 +143,22 @@ p {
 html,
 body {
 	font-size: 1.2em;
-	overflow: hidden;
 	height: 100%;
 	letter-spacing: 0.01em;
+	background: $background-color;
+	font-family: $main-font;
 }
 
-.app {
-	height: 100%;
+html {
+	-webkit-overflow-scrolling: touch;
 }
 
 #root {
-	font-family: $main-font;
 	height: 100%;
 	color: $font-color;
-	background: $background-color;
+	padding:0 5%;
+	max-width: 1250px;
+	margin: 0 auto;
 }
 
 a {
@@ -180,6 +183,7 @@ code {
 button {
 	font-size: inherit;
 	color: $font-link-color;
+	font-family: $header-font;
 	cursor: pointer;
 	border: 1px solid;
 	background: $background-color;
@@ -187,7 +191,7 @@ button {
 	padding: 0.6em;
 	border-radius: 0.2em;
 	&:hover {
-		color: $font-color;
+		color: #fff;
 		background: $font-link-color;
 		border-color: $font-link-color;
 	}
@@ -240,6 +244,25 @@ form {
 	}
 }
 
-button {
+.separate-line {
+	display: block;
 	font-family: $header-font;
+	margin-bottom: 1.2em;
+	font-size: 2em;
+	color: $font-link-color;
+}
+
+.img {
+	margin: 5em auto;
+	width: 100%;
+	border: 10px solid white;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-family: $header-font;
+	font-size: 1.6em;
 }

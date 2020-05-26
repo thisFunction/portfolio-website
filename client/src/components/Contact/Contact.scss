@@ -1,0 +1,12 @@
+.contact {
+    position: relative;
+    padding: 5% 0 calc(5% + 80px);
+
+    .contact-container:not(:last-of-type) {
+        margin-bottom: 2.2em;
+    }
+    
+    h2 {
+        margin: .8em 0 .2em;
+    }
+}

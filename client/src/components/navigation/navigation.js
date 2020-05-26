@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {NavLink} from "react-router-dom";
-import "./navigation.scss";
+import "./Navigation.scss";
 
 class Navigation extends Component {
 	constructor(props) {
@@ -14,8 +14,6 @@ class Navigation extends Component {
 		this.setState({
 			isOpen: !this.state.isOpen
 		});
-		//TODO:
-		//add navbar expanding on small screens
 	};
 
 	render() {

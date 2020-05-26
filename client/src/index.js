@@ -1,27 +1,26 @@
 import React from "react";
-import {render} from "react-dom";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import "./index.scss";
-import MainPage from "./containers/home-page/home-page";
-import DojoPage from "./containers/dojo-page/dojo-page";
-import ContactPage from "./containers/contact-page/contact-page";
-import Register from "./components/auth/register";
-import Login from "./components/auth/login";
-import ErrorPage from "./containers/error-page/error-page";
+import { render } from "react-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import Home from "./components/Home/Home";
+import Dojo from "./containers/Dojo/Dojo";
+import Contact from "./components/Contact/Contact";
+import Error from "./components/Error/Error";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import store from "./store";
-import {Provider} from "react-redux";
+import "./index.scss";
 
 render(
 	<Provider store={store}>
 		<Router>
-			<Switch>
-				<Route path="/" component={MainPage} exact />
-				<Route path="/dojo" component={DojoPage} exact />
-				<Route path="/dojo/register" component={Register} exact/>
-				<Route path="/dojo/login" component={Login} exact/>
-				<Route path="/contact" component={ContactPage} />
-				<Route component={ErrorPage} />
-			</Switch>
+			<ScrollToTop>
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/dojo" component={Dojo} />
+					<Route exact path="/contact" component={Contact} />
+					<Route component={Error} />
+				</Switch>
+			</ScrollToTop>
 		</Router>
 	</Provider>,
 	document.getElementById("root")
