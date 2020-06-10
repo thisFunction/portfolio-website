@@ -10,6 +10,10 @@
         flex-direction: column;
     }
 
+    @media (max-width: 560px) {
+        padding: 5% 0 calc(5% + 150px);
+    }
+
     aside {
         position: sticky;
         top: 0;

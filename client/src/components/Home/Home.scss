@@ -53,5 +53,10 @@
             padding-left: 0;
             padding-top: 6em;   
         }
+
+        
+        @media (max-width: 560px) {
+            padding: 5% 0 calc(5% + 150px);
+        }
     }
 }
