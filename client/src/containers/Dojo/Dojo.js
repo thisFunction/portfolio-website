@@ -72,9 +72,9 @@ class DojoPage extends Component {
 				<span className="separate-line">JS Synth</span>
 			
 				<p>Look Mom, I made a synth! <br/><br/> <a target="_blank" without rel="noopener noreferrer" href="https://thisfunction.github.io/jsSynth/">JS Synth</a></p>
-				<p>I love music and have a fascination with synthesizers, old and new. This is why I decided to create one with my favorite programming language :P</p>
+				<p>I love music and have a fascination with synthesizers, old and new. This is why I decided to create one with my favorite programming language.</p>
 				<p>The motivation and knowledge for this project came after reading <a target="_blank" without rel="noopener noreferrer" href="https://www.oreilly.com/library/view/web-audio-api/9781449332679/">Web Audio API</a> by Boris Smus.</p>
-
+				<p>Next in line: MIDI keyboard control.</p>
 				<hr className="bottom" />
 
 				<span className="separate-line">Articles</span>
