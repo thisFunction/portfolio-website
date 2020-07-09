@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from "../Navigation/Navigation";
-import image from '../../images/adam-bike.jpg'
+import image from '../../images/adam-wave-on-bike.jpg'
 import './Contact.scss';
 
 const contact = () => {

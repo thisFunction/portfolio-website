@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../images/adam01.jpg';
+import image from '../../images/adam-head.jpg';
 import Navigation from '../Navigation/Navigation';
 import './Home.scss';
 
