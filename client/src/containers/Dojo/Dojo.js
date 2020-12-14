@@ -42,32 +42,7 @@ class DojoPage extends Component {
 					</li>
 					<li>always a work in progress</li>
 				</ol>
-				<hr className="bottom" />
 
-				<span className="separate-line">MERN</span>
-				<p>
-					This website is a full-stack app created with mongoDB,
-					express, react.js, and node.js.
-				</p>
-				<p>
-					Ultimately, it will be used to serve content like my articles from the server to
-					the dojo. At the moment, it allows me to do silly things like to add or remove
-					items in my mongoDB database.
-				</p>
-				<ItemModal />
-				<ul className="dojo-list">
-					{items.map(({_id, name}) => (
-						<li key={_id}>
-							<button
-								className="remove"
-								onClick={this.removePerson.bind(this, _id)}
-							>
-								&times;
-							</button>
-							{name}
-						</li>
-					))}
-				</ul>
 				<hr className="bottom" />
 				<span className="separate-line">JS Synth</span>
 			
